@@ -1,0 +1,416 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for Consistent Styling */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --light-color: #ffffff;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--light-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: var(--font-secondary);
+    font-size: 1.8rem;
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-collapse {
+    background-color: #fff;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?education,career') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px; /* Height of the navbar */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--light-color);
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary-custom {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary-custom:hover {
+    background-color: #0056b3;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    background-color: var(--light-color);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+    color: var(--text-color);
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--background-color);
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 0;
+    background-color: var(--light-color);
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.testimonial-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.testimonial-item img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.testimonial-item h5 {
+    color: var(--primary-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--text-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+footer h5 {
+    font-family: var(--font-secondary);
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+footer p {
+    color: var(--secondary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+}
+/* Course Listings Page Styles */
+.course-listings {
+    margin-top: 2rem;
+}
+
+.course-item {
+    border-bottom: 1px solid #ccc;
+    padding: 2rem 0;
+}
+
+.course-item:last-child {
+    border-bottom: none;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.course-item h3 {
+    font-family: var(--font-secondary);
+    margin-bottom: 1rem;
+}
+
+.course-item p {
+    color: var(--text-color);
+}
+
+.course-item .btn-primary {
+    margin-top: 1rem;
+    border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+    .course-item {
+        text-align: center;
+    }
+
+    .video-wrapper {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Proprietary Course Styles */
+.course-item.proprietary {
+    position: relative;
+    background-color: #f0f8ff; /* Light blue background to distinguish proprietary courses */
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #007BFF;
+}
+
+.course-item.proprietary .proprietary-badge {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.course-item.proprietary h3 {
+    color: #007BFF;
+}
+
+.course-item.proprietary .btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.course-item.proprietary .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Adjustments for the standard course items */
+.course-item {
+    margin-bottom: 2rem;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .course-item.proprietary {
+        text-align: center;
+    }
+
+    .course-item.proprietary .proprietary-badge {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
