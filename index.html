@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EDUCareer - Advance Your Future</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Styles */
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #007BFF !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #333 !important;
+            margin-left: 1rem;
+        }
+
+        .nav-link:hover {
+            color: #007BFF !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background-image: url('https://source.unsplash.com/1600x900/?education,career');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary-custom {
+            background-color: #007BFF;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #0056b3;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #007BFF;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 4rem 0;
+        }
+
+        .testimonial-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .testimonial-item img {
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-item p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-item h5 {
+            color: #007BFF;
+        }
+
+        /* D3.js Visualization Section */
+        .analytics {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .analytics h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #007BFF;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .navbar-toggler {
+                display: block;
+                border: none;
+                background: none;
+            }
+
+            .navbar-toggler:focus {
+                outline: none;
+            }
+
+            .navbar-collapse {
+                background-color: #fff;
+            }
+
+            .nav-link {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">EDUCareer</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#careers">Careers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#modules">Modules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#login">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content text-center text-white">
+        <h1>Advance Your Career with Continuing Education</h1>
+        <p>Unlock your potential with our comprehensive modules and connect with top employers.</p>
+        <a href="#modules" class="btn btn-primary-custom">Get Started</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="feature-item">
+                    <i class="fas fa-briefcase feature-icon"></i>
+                    <h4>Careers</h4>
+                    <p>Explore a wide range of career opportunities tailored to your skills and interests.</p>
+                    <a href="#careers" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-item">
+                    <i class="fas fa-book-open feature-icon"></i>
+                    <h4>Modules</h4>
+                    <p>Access comprehensive educational modules to enhance your knowledge and expertise.</p>
+                    <a href="#modules" class="btn btn-outline-primary">Discover</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-item">
+                    <i class="fas fa-user-circle feature-icon"></i>
+                    <h4>Log In</h4>
+                    <p>Manage your profile, track your progress, and apply for jobs seamlessly.</p>
+                    <a href="#login" class="btn btn-outline-primary">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Users Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-item">
+                        <img src="https://source.unsplash.com/100x100/?person,face" alt="User Testimonial" class="mb-3">
+                        <p>"EduCareer has transformed my professional journey. The modules are insightful and the job connections are invaluable."</p>
+                        <h5>Jane Doe</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-item">
+                        <img src="https://source.unsplash.com/100x100/?woman,portrait" alt="User Testimonial" class="mb-3">
+                        <p>"Thanks to EduCareer, I landed my dream job within months of completing the courses. Highly recommended!"</p>
+                        <h5>John Smith</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-item">
+                        <img src="https://source.unsplash.com/100x100/?man,portrait" alt="User Testimonial" class="mb-3">
+                        <p>"The platform is user-friendly and the resources provided are top-notch. It’s a game-changer for continuing education."</p>
+                        <h5>Emily Johnson</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- D3.js Visualization Section -->
+<section class="analytics" id="analytics">
+    <div class="container">
+        <h2>Our Impact</h2>
+        <div id="chart"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-4 mb-3">
+                <h5>EduCareer</h5>
+                <p>Your partner in professional growth and career advancement.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#login">Log In</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Contact Us</h5>
+                <p>Email: support@educareer.com</p>
+                <p>Phone: +1 (234) 567-890</p>
+            </div>
+        </div>
+        <div class="text-center">
+            <p>&copy; 2024 EduCareer. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- D3.js -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+    // D3.js Visualization: Bar Chart Showing User Statistics
+    document.addEventListener('DOMContentLoaded', function() {
+        const data = [
+            { category: 'Completed Modules', value: 120 },
+            { category: 'Active Users', value: 80 },
+            { category: 'Job Applications', value: 150 },
+            { category: 'Employers', value: 60 },
+            { category: 'Partners', value: 30 }
+        ];
+
+        const margin = { top: 40, right: 20, bottom: 60, left: 60 },
+            width = 800 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+        const svg = d3.select('#chart')
+            .append('svg')
+            .attr('width', width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom)
+            .append('g')
+            .attr('transform', `translate(${margin.left},${margin.top})`);
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.category))
+            .range([0, width])
+            .padding(0.4);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.value) + 20])
+            .range([height, 0]);
+
+        // X Axis
+        svg.append('g')
+            .attr('transform', `translate(0, ${height})`)
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+            .style("text-anchor", "middle");
+
+        // Y Axis
+        svg.append('g')
+            .call(d3.axisLeft(y));
+
+        // Bars
+        svg.selectAll('.bar')
+            .data(data)
+            .enter()
+            .append('rect')
+            .attr('class', 'bar')
+            .attr('x', d => x(d.category))
+            .attr('y', d => y(d.value))
+            .attr('width', x.bandwidth())
+            .attr('height', d => height - y(d.value))
+            .attr('fill', '#007BFF')
+            .on('mouseover', function(event, d) {
+                d3.select(this).attr('fill', '#0056b3');
+
+                // Tooltip
+                svg.append('text')
+                    .attr('id', 'tooltip')
+                    .attr('x', x(d.category) + x.bandwidth() / 2)
+                    .attr('y', y(d.value) - 10)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#000')
+                    .text(d.value);
+            })
+            .on('mouseout', function(event, d) {
+                d3.select(this).attr('fill', '#007BFF');
+                svg.select('#tooltip').remove();
+            });
+
+        // Chart Title
+        svg.append('text')
+            .attr('x', width / 2 )
+            .attr('y', -10)
+            .attr('text-anchor', 'middle')
+            .style('font-size', '1.5rem')
+            .style('font-family', 'Poppins, sans-serif')
+            .text('EduCareer at a Glance');
+    });
+</script>
+
+</body>
+</html>
