@@ -414,3 +414,100 @@ footer p {
         transform: translateX(50%);
     }
 }
+
+/* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    font-family: var(--font-secondary);
+}
+
+.login-container form {
+    margin-bottom: 1rem;
+}
+
+.login-container .btn-primary {
+    border-radius: 50px;
+}
+
+/* Course Page Styles */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.discussion-section {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.discussion-section h4 {
+    font-family: var(--font-secondary);
+    margin-bottom: 1rem;
+}
+
+.comments .comment {
+    background-color: var(--light-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.comments .comment p {
+    margin: 0;
+}
+
+.comments .comment strong {
+    color: var(--primary-color);
+}
+
+.discussion-section form .btn-primary {
+    border-radius: 50px;
+}
+
+/* Sidebar Styles */
+.list-group-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.list-group-item a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .video-wrapper {
+        margin-bottom: 1rem;
+    }
+
+    .discussion-section {
+        padding: 1rem;
+    }
+
+    .col-md-3 {
+        margin-bottom: 2rem;
+    }
+}
