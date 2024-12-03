@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Listings - EduCareer</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome (if needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/jobs.css">
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">EduCareer</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Navigation Links -->
+        <li class="nav-item">
+          <a class="nav-link active" href="jobs.html">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#login">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Main Content -->
+<div class="container-fluid mt-5 pt-4">
+  <!-- Search Bar -->
+  <div class="row">
+    <div class="col-12">
+      <div class="input-group mt-3 mb-3">
+        <input type="text" class="form-control" placeholder="Search jobs..." id="search-input">
+        <button class="btn btn-outline-secondary" type="button" id="search-button">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Filters Column -->
+    <div class="col-md-2">
+      <h5>Filter by</h5>
+      <form id="filter-form">
+        <!-- Job Type Filters -->
+        <h6 class="mt-3">Job Types</h6>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Consulting" id="consulting" data-filter="jobType">
+          <label class="form-check-label" for="consulting">
+            Consulting
+          </label>
+        </div>
+        <!-- Add more job types -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Technology" id="technology" data-filter="jobType">
+          <label class="form-check-label" for="technology">
+            Technology
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Finance" id="finance" data-filter="jobType">
+          <label class="form-check-label" for="finance">
+            Finance
+          </label>
+        </div>
+        <!-- Company Filters -->
+        <h6 class="mt-3">Companies</h6>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="McKinsey & Company" id="mckinsey" data-filter="company">
+          <label class="form-check-label" for="mckinsey">
+            McKinsey & Company
+          </label>
+        </div>
+        <!-- Add more companies -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Google" id="google" data-filter="company">
+          <label class="form-check-label" for="google">
+            Google
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Goldman Sachs" id="goldman-sachs" data-filter="company">
+          <label class="form-check-label" for="goldman-sachs">
+            Goldman Sachs
+          </label>
+        </div>
+      </form>
+    </div>
+
+    <!-- Job Cards Column -->
+    <div class="col-md-5">
+      <div id="jobs-list">
+        <!-- Job postings will be populated here -->
+      </div>
+    </div>
+
+    <!-- Job Details Panel -->
+    <div class="col-md-5">
+      <div id="job-detail-panel" class="job-detail-panel" style="display: none;">
+        <!-- Job details will be displayed here when a job is clicked -->
+        <div class="job-detail-content">
+          <button id="close-panel-btn" class="btn btn-secondary">Close</button>
+          <!-- Job detail content -->
+          <h3 id="job-title"></h3>
+          <p><strong>Company:</strong> <span id="job-company"></span></p>
+          <p><strong>Location:</strong> <span id="job-location"></span></p>
+          <p><strong>Date Posted:</strong> <span id="job-date"></span></p>
+          <p id="job-description"></p>
+          <!-- Apply Now Button -->
+          <a href="#" id="apply-now-btn" class="btn btn-primary apply-btn">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-3 mt-4">
+  &copy; 2023 EduCareer. All rights reserved.
+</footer>
+
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="js/jobs.js"></script>
+</body>
+</html>

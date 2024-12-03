@@ -93,13 +93,11 @@ body {
 }
 
 /* Hero Section */
-
 .hero {
     position: relative;
-    background-image: url('../img/home_pic.jpg');
-    background-size: cover;
-    background-position: center;
+    width: 100%;
     height: 100vh;
+    background: url('../img/home_pic.jpg') center center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,17 +105,15 @@ body {
     color: #fff;
 }
 
-
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
     z-index: 1;
 }
-
 
 .hero-content {
     position: relative;
@@ -128,31 +124,32 @@ body {
     padding: 0 1rem;
 }
 
-.hero-content h1 {
+/* Typing Effect */
+#typed-text {
     font-family: var(--font-secondary);
     font-size: 3rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #fff;
+    margin-left: 5px;
+    animation: blink 0.7s steps(1) infinite;
 }
 
-.btn-primary-custom {
-    padding: 0.8rem 2rem;
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-decoration: none;
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
 }
 
-.btn-primary-custom:hover {
-    background-color: #0056b3;
+.typing .cursor {
+    animation: none;
 }
 
 /* Dropdown Styles */
@@ -206,9 +203,26 @@ body {
     transform: translateY(-10px);
 }
 
+/* Buttons */
+.btn-primary-custom {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary-custom:hover {
+    background-color: #0056b3;
+}
+
 .btn-outline-primary {
     color: var(--primary-color);
-    border-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 50px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -296,6 +310,7 @@ footer p {
         margin: 1rem 0;
     }
 }
+
 /* Course Listings Page Styles */
 .course-listings {
     margin-top: 2rem;
@@ -308,21 +323,6 @@ footer p {
 
 .course-item:last-child {
     border-bottom: none;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .course-item h3 {
@@ -339,32 +339,22 @@ footer p {
     border-radius: 50px;
 }
 
-@media (max-width: 768px) {
-    .course-item {
-        text-align: center;
-    }
-
-    .video-wrapper {
-        margin-bottom: 1.5rem;
-    }
-}
-
 /* Proprietary Course Styles */
 .course-item.proprietary {
     position: relative;
-    background-color: #f0f8ff; /* Light blue background to distinguish proprietary courses */
+    background-color: #f0f8ff; /* Light blue background */
     padding: 2rem 1rem;
     border-radius: 8px;
     margin-bottom: 2rem;
-    border: 1px solid #007BFF;
+    border: 1px solid var(--primary-color);
 }
 
 .course-item.proprietary .proprietary-badge {
     position: absolute;
     top: 10px;
     right: 15px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--light-color);
     padding: 0.3rem 0.6rem;
     border-radius: 50px;
     font-size: 0.9rem;
@@ -372,22 +362,17 @@ footer p {
 }
 
 .course-item.proprietary h3 {
-    color: #007BFF;
+    color: var(--primary-color);
 }
 
 .course-item.proprietary .btn-primary {
-    background-color: #007BFF;
-    border-color: #007BFF;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .course-item.proprietary .btn-primary:hover {
     background-color: #0056b3;
     border-color: #0056b3;
-}
-
-/* Adjustments for the standard course items */
-.course-item {
-    margin-bottom: 2rem;
 }
 
 /* Video Wrapper */
@@ -405,20 +390,6 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .course-item.proprietary {
-        text-align: center;
-    }
-
-    .course-item.proprietary .proprietary-badge {
-        top: auto;
-        bottom: 10px;
-        right: 50%;
-        transform: translateX(50%);
-    }
 }
 
 /* Login Page Styles */
@@ -445,23 +416,6 @@ footer p {
 }
 
 /* Course Page Styles */
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .discussion-section {
     background-color: var(--background-color);
     padding: 1.5rem;
@@ -516,4 +470,30 @@ footer p {
     .col-md-3 {
         margin-bottom: 2rem;
     }
+
+    .course-item.proprietary {
+        text-align: center;
+    }
+
+    .course-item.proprietary .proprietary-badge {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+/* General Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--light-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
 }

@@ -1,0 +1,178 @@
+/* jobs.css */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, h3, h5, h6 {
+    font-weight: 700;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+/* Job Cards Styles */
+.job-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+
+.job-card h5 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.job-card p {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+.job-card .btn-apply {
+    margin-top: 10px;
+}
+
+/* Job Detail Panel Styles */
+.job-detail-panel {
+    padding: 20px;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    position: relative;
+}
+
+.job-detail-content {
+    position: relative;
+    height: 100%;
+}
+
+#close-panel-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.apply-btn {
+    position: sticky;
+    bottom: 20px;
+    margin-top: 20px;
+    /* Ensure it's visible without scrolling */
+}
+
+/* Footer Styles */
+footer {
+    position: static;
+    width: 100%;
+    bottom: 0;
+    background-color: #f8f9fa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .job-detail-panel {
+        height: auto;
+        border-left: none;
+    }
+
+    .apply-btn {
+        position: static;
+        margin-top: 20px;
+    }
+
+    #close-panel-btn {
+        position: static;
+        margin-top: 20px;
+    }
+
+    /* Stack columns on smaller screens */
+    .col-md-2, .col-md-5 {
+        width: 100%;
+    }
+}
+/* Variables */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --light-color: #ffffff;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--light-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: var(--font-secondary);
+    font-size: 1.8rem;
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-collapse {
+    background-color: #fff;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Active Nav Link */
+.nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
