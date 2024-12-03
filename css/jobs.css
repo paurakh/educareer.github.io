@@ -1,16 +1,49 @@
 /* jobs.css */
 
+/* Variables */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --light-color: #ffffff;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+}
+
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    /* Adjust body padding to account for fixed navbar */
+    padding-top: 70px; /* Height of the navbar */
 }
 
-h2, h3, h5, h6 {
-    font-weight: 700;
+/* Job Listings Container */
+#job-listings-container {
+    height: calc(100vh - 70px - 50px); /* Subtract navbar and search bar height */
+    overflow-y: auto;
+    padding-right: 15px; /* To prevent scrollbar overlay */
 }
 
-.form-check-label {
-    margin-left: 5px;
+/* Job Details Pane */
+.job-detail-panel {
+    position: sticky;
+    top: 70px; /* Height of the navbar */
+    padding: 20px;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    height: calc(100vh - 70px - 50px); /* Subtract navbar and search bar height */
+    overflow-y: auto;
+}
+
+/* Job Detail Content */
+.job-detail-content {
+    position: relative;
+    min-height: 100%;
 }
 
 /* Job Cards Styles */
@@ -43,64 +76,26 @@ h2, h3, h5, h6 {
     margin-top: 10px;
 }
 
-/* Job Detail Panel Styles */
-.job-detail-panel {
-    padding: 20px;
-    background-color: #fff;
-    border-left: 1px solid #ddd;
-    height: calc(100vh - 70px);
-    overflow-y: auto;
-    position: relative;
-}
-
-.job-detail-content {
-    position: relative;
-    height: 100%;
-}
-
-#close-panel-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
+/* Apply Now Button */
 .apply-btn {
-    position: sticky;
-    bottom: 20px;
     margin-top: 20px;
-    /* Ensure it's visible without scrolling */
-}
-
-/* Footer Styles */
-footer {
-    position: static;
-    width: 100%;
-    bottom: 0;
-    background-color: #f8f9fa;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .job-detail-panel {
+        position: static;
+        top: auto;
         height: auto;
-        border-left: none;
-    }
-
-    .apply-btn {
-        position: static;
         margin-top: 20px;
     }
 
-    #close-panel-btn {
-        position: static;
-        margin-top: 20px;
-    }
-
-    /* Stack columns on smaller screens */
-    .col-md-2, .col-md-5 {
-        width: 100%;
+    #job-listings-container {
+        height: auto;
+        padding-right: 0;
     }
 }
+
 /* Variables */
 :root {
     --primary-color: #007BFF;
