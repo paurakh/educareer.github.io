@@ -1,52 +1,5 @@
 /* jobs.css */
-
-/* Variables */
-:root {
-    --primary-color: #007BFF;
-    --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
-    --text-color: #343a40;
-    --light-color: #ffffff;
-    --font-primary: 'Roboto', sans-serif;
-    --font-secondary: 'Poppins', sans-serif;
-}
-
-/* General Styles */
-body {
-    font-family: var(--font-primary);
-    color: var(--text-color);
-    background-color: var(--background-color);
-    line-height: 1.6;
-    scroll-behavior: smooth;
-    /* Adjust body padding to account for fixed navbar */
-    padding-top: 70px; /* Height of the navbar */
-}
-
-/* Job Listings Container */
-#job-listings-container {
-    height: calc(100vh - 70px - 50px); /* Subtract navbar and search bar height */
-    overflow-y: auto;
-    padding-right: 15px; /* To prevent scrollbar overlay */
-}
-
-/* Job Details Pane */
-.job-detail-panel {
-    position: sticky;
-    top: 70px; /* Height of the navbar */
-    padding: 20px;
-    background-color: #fff;
-    border-left: 1px solid #ddd;
-    height: calc(100vh - 70px - 50px); /* Subtract navbar and search bar height */
-    overflow-y: auto;
-}
-
-/* Job Detail Content */
-.job-detail-content {
-    position: relative;
-    min-height: 100%;
-}
-
-/* Job Cards Styles */
+/* Job Card Styles */
 .job-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -72,11 +25,36 @@ body {
     font-size: 0.95em;
 }
 
-.job-card .btn-apply {
-    margin-top: 10px;
+/* Job Detail Panel Styles */
+.job-detail-panel {
+    padding: 20px;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    height: calc(100vh - 140px); /* Adjust based on your header/footer height */
+    overflow-y: auto;
 }
 
-/* Apply Now Button */
+.job-detail-panel h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #343a40;
+}
+
+.job-detail-panel p {
+    font-size: 1em;
+    margin-top: 15px;
+    color: #343a40;
+}
+
+.job-detail-panel ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.job-detail-panel ul li {
+    margin-bottom: 5px;
+}
+
 .apply-btn {
     margin-top: 20px;
 }
