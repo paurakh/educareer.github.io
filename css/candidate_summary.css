@@ -1,0 +1,137 @@
+/* candidate_summary.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.candidate-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.display-4 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Charts */
+#skillsRadarChart,
+#scoreDonutChart {
+    max-width: 100%;
+    height: auto;
+}
+
+#skillsRadarChart {
+    max-height: 400px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 780px) {
+    .candidate-photo {
+        width: 150px;
+        height: 180px;
+    }
+
+    .display-4 {
+        font-size: 2.5em;
+    }
+
+    /* Stack charts vertically on smaller screens */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Variables */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --light-color: #ffffff;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--light-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: var(--font-secondary);
+    font-size: 1.8rem;
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-collapse {
+    background-color: #fff;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Active Nav Link */
+.nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
